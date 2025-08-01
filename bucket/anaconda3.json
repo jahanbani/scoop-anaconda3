@@ -48,14 +48,11 @@
   "reverse": true
 },
 "autoupdate": {
-  "architecture": {
-    "64bit": {
-      "url":  "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86_64.exe",
-      "hash": {
-        "url":   "https://repo.anaconda.com/archive/",
-        "regex": "(?sm)$basename.*?$sha256"
-      }
-    }
+  "url":    "https://repo.anaconda.com/archive/Anaconda3-${version}-Windows-x86_64.exe",
+  "hash": {
+    // point at the directory HTML, not a missing txt file
+    "url":  "https://repo.anaconda.com/archive/",
+    // capture the 64-hex‐digit SHA-256 that follows your installer name
+    "find": "Anaconda3-${version}-Windows-x86_64\\.exe\\s+[0-9\\.]+[MKG]B\\s+[0-9\\-:\\s]+\\s+([A-Fa-f0-9]{64})"
   }
-}
 }
