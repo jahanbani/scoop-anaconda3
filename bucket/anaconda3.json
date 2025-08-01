@@ -1,5 +1,5 @@
 {
-    "version": "2024.10-1",
+    "version": "2023.03-0",
     "description": "The most popular Python distribution for data science.",
     "homepage": "https://www.anaconda.com/",
     "license": "BSD-3-Clause",
@@ -12,8 +12,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Windows-x86_64.exe",
-            "hash": "c1cb433e23997c84ade4ff7241b61b2f9b10a616c230da34e641e9c96dada49d"
+            "url": "https://repo.anaconda.com/archive/Anaconda3-2023.03-0-Windows-x86_64.exe",
+            "hash": "849daee6c1926bb43306d0e4ce0cc50719b5bb5e43e085fc5092513ef8bf1fd5"
         }
     },
     "pre_install": "if ($dir -match ' ') { error 'The installation directory cannot include a space'; break}",
@@ -43,19 +43,19 @@
         ]
     },
     "checkver": {
-      "url": "https://repo.anaconda.com/archive/",
-      "regex": "Anaconda3-([\\d.]+-\\d+)-Windows-x86_64\\.exe",
-      "reverse": true               // pick the newest match on the page
+        "url": "https://repo.anaconda.com/archive/",
+        "regex": "Anaconda3-([\\d.]+-\\d+)-Windows-x86_64\\.exe",
+        "reverse": true
     },
     "autoupdate": {
-      "architecture": {
-        "64bit": {
-          "url":  "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86_64.exe",
-          "hash": {
-            "url":   "https://repo.anaconda.com/archive/",
-            "regex": "(?sm)$basename.*?$sha256"   // grab the 64-char SHA256 in the same table row
-          }
+        "architecture": {
+            "64bit": {
+                "url": "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86_64.exe",
+                "hash": {
+                    "url": "https://repo.anaconda.com/archive/",
+                    "regex": "(?sm)$basename.*?$sha256"
+                }
+            }
         }
-      }
     }
 }
