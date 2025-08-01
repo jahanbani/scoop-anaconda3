@@ -61,7 +61,12 @@ Two easy fixes:
 
 # fresh install
 
-env\:SCOOP='C:\scoop'
+\$env\:SCOOP='C:\scoop'
+
+# (optional) persist for future sessions
+
+[Environment]: :SetEnvironmentVariable\('SCOOP','C\scoop','User'\)
+
 irm get.scoop.sh | iex
 
 ````|
