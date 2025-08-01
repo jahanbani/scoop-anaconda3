@@ -45,7 +45,7 @@
     "checkver": {
         "url": "https://repo.anaconda.com/archive/",
         "regex": "Anaconda3-([\\d.]+-\\d+)-Windows-x86_64\\.exe",
-        "reverse": true
+        "reverse": false
     },
     "autoupdate": {
         "architecture": {
