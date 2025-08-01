@@ -43,9 +43,9 @@
         ]
     },
     "checkver": {
-        "url": "https://docs.anaconda.com/free/anaconda/hashes/",
-        "regex": "Anaconda3-([\\d.-]+)-Windows",
-        "reverse": true
+          "url":   "https://repo.anaconda.com/archive/",
+          "regex": "Anaconda3-([\\d.]+-\\d+)-Windows-x86_64\\.exe",
+          "reverse": true
     },
     "autoupdate": {
         "architecture": {
